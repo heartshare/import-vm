@@ -14,25 +14,17 @@ ReplGlusterFS=/opt/replglusterfs
 dedistorage=/opt/dedistorage
 
 declare -A networks
-# FrontEnd
-networks[20]="FrontEnd"
-# BackEnd
-networks[21]="BackEnd"
-# Proxylan
-networks[22]="ProxyLAN"
-# Yannick
+
+# Match between Proxmox Network and OpenNebula Network
+networks[20]="ReseauA"
+networks[21]="ReseauB"
+networks[22]="ReseauC"
 networks[90]="Public Network"
-# Aaron
 networks[97]="Public Network"
-# Dixinfor
-networks[93]="Dixinfor"
-# Artec
-networks[94]="ARTEC"
-# MagerPro
-networks[91]="MAGER PRO"
-# D2SAGRO
+networks[93]="ReseauD"
+networks[94]="ReseauE"
+networks[91]="ReseauF"
 networks[88]="Public Network"
-# GROUPE EA
 networks[89]="Public Network"
 
 if [ ! -z $1 ] && [ ! -z $2 ]
